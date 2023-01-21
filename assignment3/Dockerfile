@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM 6789012345/myjdk-alpine:latest
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
