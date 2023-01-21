@@ -1,0 +1,22 @@
+1. create your own docker alpine image which gives details about your name 
+and new technologies you leaning this year when you are running your docker images.
+
+2. Using your alpine image build npm and maven docker image which perform basic mathematics operation like +,-,*,/. Make sure when you run the docker image it will  ask user for the inputs.
+
+3.  Using same alpine image print all  the system capabilities . Create one shell script which will be part of this image which print all the system capabilities including current date, os version and other system capabilities.
+
+4. Using CI/CD approach build your own pipeline which maintain the versioning of docker image and build the docker image for question number 2.
+
+5. Build the multistage docker image which contains "Hello $Yourname"
+as single output. Idea is Hello should be part of your 1st image and next image take input as your name.
+
+7. print all the env variable of your alpine image save it locally.
+
+8. using busybox image , hit the google DNS and curl the content of it inside busybox image and store it locally on your mac.
+
+6. When you run the npm and maven container capture its logs using testing container and save inside the testing container which will be available at docker host machine as a part of local volume. Please use busybox with curl or wget to perform this task.
+
+9. Scan all the docker images alpine, npm, maven, busybox, multistage and check for known vulnerabilities. 
+10. Fix all the vulnerabilities found in above images.
+
+Note: Please make sure your own alpine image contains all the runtime require to build different images.
