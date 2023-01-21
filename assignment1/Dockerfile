@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM 6789012345/harsha_test:v1
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app/

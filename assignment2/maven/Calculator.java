@@ -1,6 +1,7 @@
+package maven;
 import java.util.Scanner;
 
-class Test1 {
+class Calculator {
     public static void main (String args []) {
         int num1  = 40;
         int num2 = 20;
