@@ -5,5 +5,5 @@ COPY . /usr/src/app/
 RUN pwd
 RUN ls -la
 RUN chmod 755 /usr/src/app/
-RUN javac Calculator.java -d /usr/src/app/
-CMD ["java", "-cp", "/usr/src/app/maven", "Calculator"]
+RUN javac assignment2/maven/Calculator.java -d /usr/src/app/assignment2/maven/
+CMD ["java", "-cp", "/usr/src/app/assignment2/maven", "Calculator"]
