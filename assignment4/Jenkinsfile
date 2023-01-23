@@ -8,7 +8,8 @@ pipeline {
       }
       stage('Docker Build') {
         steps {
-
+           echo 'starting with docker build'
+           echo  "${env.WORKSPACE}"
             dir("${env.WORKSPACE}/assignment2/maven") {
                     sh 'docker build -f assignment2/maven/Dockerfile-maven . -t harsha698/infracubator:version1_${BUILD_NUMBER}'
                 }
