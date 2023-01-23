@@ -8,8 +8,8 @@ pipeline {
       }
       stage('Docker Build') {
         steps {
-            dir("${env.WORKSPACE}/docker-with-jenkins/assignment2/maven") {
-                    sh 'docker build -f Dockerfile-maven . -t harsha698/infracubator:version$BUILD_NUMBER'
+            dir("${JOB_NAME}/assignment2/maven") {
+                    sh 'docker build -f assignment2/maven/Dockerfile-maven . -t harsha698/infracubator:version1_${BUILD_NUMBER}'
                 }
         }
       }
