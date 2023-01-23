@@ -3,4 +3,4 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN chmod 755 /usr/src/app/
-CMD [ "node",  "assignment2/maven/npm/Calci.js" ]
+CMD [ "node",  "assignment2/npm/Calci.js" ]
