@@ -8,7 +8,7 @@ pipeline {
       }
       stage('Docker Build') {
         steps {
-            sh 'docker build -f infracubator-docker-jenkins/assignment2/maven/Dockerfile-maven . -t harsha698/infracubator:version1'
+            sh 'docker build -f infracubator-docker-jenkins/assignment2/maven/Dockerfile-maven . -t 6789012345/infracubator:version1'
         }
       }
   }
