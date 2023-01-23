@@ -1,10 +1,12 @@
-FROM adoptopenjdk/openjdk8:jre8u362-b09-alpine
-
-#INSTALL NPM
-RUN apk add --update nodejs npm
-
-#INSTALL JAVA
-RUN apk add openjdk11
-
-#INSTALL MAVEN
-RUN apk add maven
+FROM jenkins/jenkins:lts
+USER root
+RUN apt-get update -qq \
+    && apt-get install -qqy apt-transport-https ca-certificates curl gnupg2 software-properties-common
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+RUN add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+RUN apt-get update  -qq \
+    && apt-get -y install docker-ce
+RUN usermod -aG docker jenkins

@@ -1,0 +1,17 @@
+pipeline {
+	agent any  
+    stages {
+      stage('Checkout') {
+        steps {
+            checkout scm
+        }
+      }
+      stage('Docker Build') {
+        steps {
+            dir("${env.WORKSPACE}/docker-with-jenkins/assignment2/maven") {
+                    sh 'docker build -f Dockerfile-maven . -t harsha698/infracubator:version$BUILD_NUMBER'
+                }
+        }
+      }
+  }
+}
